@@ -6,15 +6,22 @@ class Screen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blue, title: Text('Screen 2')),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('Screen 2'),
+        foregroundColor: Colors.white,
+      ),
       body: Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue, // replaces `color`
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
           ),
 
           child: Text('Go Back To Screen 1'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
     );
